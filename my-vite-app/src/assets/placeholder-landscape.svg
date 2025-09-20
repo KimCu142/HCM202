@@ -1,0 +1,8 @@
+<svg width="480" height="320" viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="320" rx="24" fill="#ede3d0" />
+  <rect x="24" y="24" width="432" height="272" rx="18" fill="#f9f4ea" stroke="#d6c2a4" stroke-width="3" />
+  <path d="M24 180H456" stroke="#d6c2a4" stroke-dasharray="12 18" stroke-width="3" />
+  <path d="M60 236l74-74 52 52 84-84 108 108" stroke="#c7a978" stroke-width="8" stroke-linecap="round" fill="none" />
+  <circle cx="144" cy="136" r="30" fill="#e5d6bb" />
+  <text x="50%" y="288" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="28" fill="#a36c2b">Insert Historical Photo</text>
+</svg>

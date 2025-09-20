@@ -5,15 +5,21 @@ const config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#1e40af',
-          light: '#1d4ed8',
-          dark: '#1e3a8a',
+          DEFAULT: '#7c2d12',
+          light: '#a0431d',
+          dark: '#5f1f0d',
         },
-        accent: '#0ea5e9',
-        muted: '#f1f5f9',
+        accent: '#b45309',
+        parchment: '#f3e7d3',
+        midnight: '#1f2937',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        mono: ['"Source Code Pro"', 'monospace'],
+      },
+      backgroundImage: {
+        'paper-texture': "url('/paper-texture.svg')",
       },
     },
   },

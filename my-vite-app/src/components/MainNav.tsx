@@ -1,28 +1,34 @@
-import { NavLink } from 'react-router-dom'
+type SectionId = 'home' | 'ideology' | 'practice' | 'references'
 
-const links = [
-  { to: '/', label: 'Home' },
-  { to: '/ideology', label: 'Ideology' },
-  { to: '/practice', label: 'Practice' },
-  { to: '/references', label: 'References' }
+type MainNavProps = {
+  activeSection: SectionId
+  onNavigate: (id: SectionId) => void
+}
+
+const links: { id: SectionId; label: string }[] = [
+  { id: 'home', label: 'Trang chủ' },
+  { id: 'ideology', label: 'Tư tưởng' },
+  { id: 'practice', label: 'Thực tiễn' },
+  { id: 'references', label: 'Tư liệu' },
 ]
 
-const MainNav = () => {
+const MainNav = ({ activeSection, onNavigate }: MainNavProps) => {
   return (
     <nav aria-label="Main navigation">
-      <ul className="flex flex-col gap-2 text-sm font-medium sm:flex-row sm:items-center sm:gap-6">
+      <ul className="flex flex-col gap-2 text-sm font-medium sm:flex-row sm:items-center sm:gap-4">
         {links.map((link) => (
-          <li key={link.to}>
-            <NavLink
-              to={link.to}
-              className={({ isActive }) =>
-                `rounded-md px-3 py-2 transition-colors ${
-                  isActive ? 'bg-white text-primary shadow-sm' : 'text-white hover:bg-white/10'
-                }`
-              }
+          <li key={link.id}>
+            <button
+              type="button"
+              onClick={() => onNavigate(link.id)}
+              className={`rounded-full px-4 py-2 transition-colors ${
+                activeSection === link.id
+                  ? 'bg-primary text-white shadow-md'
+                  : 'text-midnight/70 hover:bg-primary/10 hover:text-primary'
+              }`}
             >
               {link.label}
-            </NavLink>
+            </button>
           </li>
         ))}
       </ul>

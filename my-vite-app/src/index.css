@@ -3,8 +3,19 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
-    @apply bg-white text-slate-800 font-sans antialiased;
+    @apply bg-parchment text-midnight font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif text-midnight;
   }
 
   a {
@@ -14,8 +25,16 @@
   a:hover {
     @apply text-accent;
   }
+
+  ::selection {
+    @apply bg-primary/20 text-midnight;
+  }
+}
+
+section {
+  @apply scroll-mt-28;
 }
 
 main {
-  @apply bg-white;
+  @apply bg-parchment;
 }

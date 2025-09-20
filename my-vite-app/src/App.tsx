@@ -1,21 +1,62 @@
-import { Navigate, Route, Routes } from 'react-router-dom'
-import Layout from './components/Layout'
-import Home from './pages/Home'
-import Ideology from './pages/Ideology'
-import Practice from './pages/Practice'
-import References from './pages/References'
+import { useEffect, useState } from 'react'
+import Footer from './components/Footer'
+import Header from './components/Header'
+import Home from './sections/Home'
+import Ideology from './sections/Ideology'
+import Practice from './sections/Practice'
+import References from './sections/References'
+
+const sectionOrder = ['home', 'ideology', 'practice', 'references'] as const
+
+type SectionId = (typeof sectionOrder)[number]
 
 const App = () => {
+  const [activeSection, setActiveSection] = useState<SectionId>('home')
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+
+        if (visible[0]?.target.id) {
+          setActiveSection(visible[0].target.id as SectionId)
+        }
+      },
+      {
+        root: null,
+        threshold: [0.25, 0.5, 0.75],
+        rootMargin: '-40% 0px -40% 0px',
+      },
+    )
+
+    sectionOrder.forEach((id) => {
+      const element = document.getElementById(id)
+      if (element) observer.observe(element)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
+  const handleNavigate = (id: SectionId) => {
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/ideology" element={<Ideology />} />
-        <Route path="/practice" element={<Practice />} />
-        <Route path="/references" element={<References />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Route>
-    </Routes>
+    <div className="min-h-screen bg-muted">
+      <Header activeSection={activeSection} onNavigate={handleNavigate} />
+      <main className="flex flex-col gap-20">
+        <Home />
+        <Ideology />
+        <Practice />
+        <References />
+      </main>
+      <Footer />
+    </div>
   )
 }
 
