@@ -52,12 +52,6 @@ const Practice = () => {
                   <p className="text-xs font-semibold uppercase tracking-wide text-primary">{item.year}</p>
                   <h3 className="text-xl font-semibold text-midnight">{item.title}</h3>
                   <p className="text-sm leading-relaxed text-midnight/80">{item.description}</p>
-                  <figure className="rounded-2xl border border-primary/10 bg-parchment/60 p-3 text-xs text-midnight/70">
-                    <div className="flex flex-col gap-2 text-center">
-                      <span className="font-semibold text-primary/80">Image suggestion:</span>
-                      <span>{item.imageHint}</span>
-                    </div>
-                  </figure>
                 </div>
               </li>
             ))}
