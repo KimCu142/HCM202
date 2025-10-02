@@ -6,10 +6,10 @@ type MainNavProps = {
 }
 
 const links: { id: SectionId; label: string }[] = [
-  { id: 'home', label: 'Trang chủ' },
-  { id: 'ideology', label: 'Tư tưởng' },
-  { id: 'practice', label: 'Thực tiễn' },
-  { id: 'references', label: 'Tư liệu' },
+  { id: 'home', label: 'Mở đầu' },
+  { id: 'ideology', label: 'Phần I' },
+  { id: 'practice', label: 'Phần II' },
+  { id: 'references', label: 'Phần III' },
 ]
 
 const MainNav = ({ activeSection, onNavigate }: MainNavProps) => {
