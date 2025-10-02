@@ -1,60 +1,111 @@
-import iconPeople from '../assets/icon-people.svg'
-import iconService from '../assets/icon-service.svg'
-import iconVote from '../assets/icon-vote.svg'
-import portraitPlaceholder from '../assets/placeholder-portrait.svg'
+import iconPeople from "../assets/icon-people.svg"
+import iconService from "../assets/icon-service.svg"
+import iconVote from "../assets/icon-vote.svg"
+import portraitPlaceholder from "../assets/placeholder-portrait.svg"
 
 const ideologySections = [
   {
-    title: 'Nhà nước của nhân dân',
+    title: "Nhà nước của nhân dân",
     description:
       'Nhân dân là chủ thể tối cao của quyền lực nhà nước. Nhân dân có quyền kiểm soát, phê bình nhà nước, và bãi miễn những đại biểu mà họ không còn tín nhiệm. Thậm chí, Hồ Chí Minh còn nhấn mạnh rằng "Nếu Chính phủ làm hại dân thì dân có quyền đuổi Chính phủ". Nhà nước phải bảo đảm tất cả quyền lực thuộc về nhân dân.',
     image: iconPeople,
-    photo: 'https://www.tapchicongsan.org.vn/documents/20182/68379327/Bac+Ho.jpg/46b2d9f6-9b23-4001-82f0-e69a08238fd2?t=1601802956661',
+    photo:
+      "https://www.tapchicongsan.org.vn/documents/20182/68379327/Bac+Ho.jpg/46b2d9f6-9b23-4001-82f0-e69a08238fd2?t=1601802956661",
   },
   {
-    title: 'Nhà nước do nhân dân',
+    title: "Nhà nước do nhân dân",
     description: (
       <ul className="space-y-2">
-        <li><strong>Dân ủy thác quyền lực:</strong> Mọi công việc của Nhà nước đều là do nhân dân ủy thác.</li>
-        <li><strong>Cán bộ là công bộc:</strong> Các cơ quan nhà nước và cán bộ đều là <strong>"công bộc"</strong> của nhân dân, chỉ là "gác việc chung cho dân, chứ không phải để đè đầu dân".</li>
-        <li><strong>Trách nhiệm và nghĩa vụ:</strong> Nhân dân có quyền lợi, đồng thời có nghĩa vụ phải <strong>tuân theo pháp luật</strong>, giữ gìn trật tự chung, đóng góp vào xây dựng lợi ích chung, bảo vệ Tổ quốc.</li>
-        <li><strong>Tham gia quản lý:</strong> Nhà nước tạo điều kiện cho nhân dân thực hiện quyền của mình, tham gia vào công việc nhà nước.</li>
+        <li>
+          <strong>Dân ủy thác quyền lực:</strong> Mọi công việc của Nhà nước đều
+          là do nhân dân ủy thác.
+        </li>
+        <li>
+          <strong>Cán bộ là công bộc:</strong> Các cơ quan nhà nước và cán bộ
+          đều là <strong>"công bộc"</strong> của nhân dân, chỉ là "gác việc
+          chung cho dân, chứ không phải để đè đầu dân".
+        </li>
+        <li>
+          <strong>Trách nhiệm và nghĩa vụ:</strong> Nhân dân có quyền lợi, đồng
+          thời có nghĩa vụ phải <strong>tuân theo pháp luật</strong>, giữ gìn
+          trật tự chung, đóng góp vào xây dựng lợi ích chung, bảo vệ Tổ quốc.
+        </li>
+        <li>
+          <strong>Tham gia quản lý:</strong> Nhà nước tạo điều kiện cho nhân dân
+          thực hiện quyền của mình, tham gia vào công việc nhà nước.
+        </li>
       </ul>
     ),
     image: iconPeople,
-    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQbeitdL_CNrqFFuLBVLfSl_GAdIEuO9q1Vg&s',
+    photo:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQbeitdL_CNrqFFuLBVLfSl_GAdIEuO9q1Vg&s",
   },
   {
-    title: 'Nhà nước vì nhân dân',
+    title: "Nhà nước vì nhân dân",
     description: (
       <>
-        <p className="mb-3">Nhà nước tồn tại để <strong>phục vụ lợi ích</strong> và nguyện vọng chính đáng của nhân dân, không có đặc quyền, đặc lợi.</p>
+        <p className="mb-3">
+          Nhà nước tồn tại để <strong>phục vụ lợi ích</strong> và nguyện vọng
+          chính đáng của nhân dân, không có đặc quyền, đặc lợi.
+        </p>
         <ul className="space-y-2">
-          <li><strong>Mục tiêu tối thượng:</strong> Hồ Chí Minh chỉ rõ mục đích duy nhất của mọi công việc của Chính phủ là <strong>"phải mưu hạnh phúc cho mọi người"</strong>. Người dặn dò phải <strong>"làm sao cho dân được ăn, được mặc, được ở, được học hành"</strong>.</li>
-          <li><strong>Tinh thần vô tư:</strong> Cán bộ, đảng viên phải là những người lãnh đạo, đồng thời là người đầy tớ trung thành nhất của nhân dân, có <strong>tinh thần "công vô tư"</strong>.</li>
+          <li>
+            <strong>Mục tiêu tối thượng:</strong> Hồ Chí Minh chỉ rõ mục đích
+            duy nhất của mọi công việc của Chính phủ là{" "}
+            <strong>"phải mưu hạnh phúc cho mọi người"</strong>. Người dặn dò
+            phải{" "}
+            <strong>
+              "làm sao cho dân được ăn, được mặc, được ở, được học hành"
+            </strong>
+            .
+          </li>
+          <li>
+            <strong>Tinh thần vô tư:</strong> Cán bộ, đảng viên phải là những
+            người lãnh đạo, đồng thời là người đầy tớ trung thành nhất của nhân
+            dân, có <strong>tinh thần "công vô tư"</strong>.
+          </li>
         </ul>
       </>
     ),
     image: iconService,
-    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYrJGoVAJp4pVPEFhGd_zDmhRnW6BMXhBEFQ&s',
+    photo:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYrJGoVAJp4pVPEFhGd_zDmhRnW6BMXhBEFQ&s",
   },
 ]
 
 const supportingPoints = [
-  'Sự lãnh đạo của Đảng Cộng sản Việt Nam. Đảng là đội tiên phong của giai cấp công nhân và đại diện cho quyền lợi của nhân dân lao động, giữ vai trò quan trọng và tối cao.',
-  'Tính định hướng xã hội chủ nghĩa. Mục tiêu của Nhà nước là xây dựng xã hội xã hội chủ nghĩa, là mục tiêu cách mạng của giai cấp công nhân và nhân dân lao động.',
-  'Liên minh công nông: Nhà nước ta dựa trên nền tảng liên minh công nhân - nông dân - trí thức do giai cấp công nhân lãnh đạo.',
+  {
+    title: "Sự lãnh đạo của Đảng Cộng sản Việt Nam",
+    description:
+      "Đảng là đội tiên phong của giai cấp công nhân và đại diện cho quyền lợi của nhân dân lao động, giữ vai trò quan trọng và tối cao.",
+  },
+  {
+    title: "Tính định hướng xã hội chủ nghĩa",
+    description:
+      "Mục tiêu của Nhà nước là xây dựng xã hội xã hội chủ nghĩa, là mục tiêu cách mạng của giai cấp công nhân và nhân dân lao động.",
+  },
+  {
+    title: "Liên minh công nông",
+    description:
+      "Nhà nước ta dựa trên nền tảng liên minh công nhân - nông dân - trí thức do giai cấp công nhân lãnh đạo.",
+  },
 ]
 
 const Ideology = () => {
   return (
-    <section id="ideology" className="bg-parchment/80 px-4 py-24 sm:px-6 lg:px-8">
-      <div className="mx-auto flex max-w-6xl flex-col gap-16">
-        <aside className="grid gap-6 rounded-3xl bg-white/70 p-8 shadow-md ring-1 ring-primary/10 md:grid-cols-[1fr_1.2fr]">
+    <section
+      id="ideology"
+      className="bg-parchment/80 px-4 pt-16 sm:px-6 lg:px-8"
+    >
+      <div className="mx-auto flex max-w-7xl flex-col gap-16">
+        <aside className="grid gap-6 rounded-xl bg-white/70 p-8 shadow-md ring-1 ring-primary/10 md:grid-cols-[1fr_1.2fr]">
           <div className="space-y-3">
-            <h3 className="text-2xl font-semibold text-primary">Bản chất giai cấp của Nhà nước</h3>
-            <p className="text-sm leading-relaxed text-midnight/80">
-              Bản chất giai cấp công nhân của Nhà nước được thể hiện qua các mặt sau:
+            <h3 className="text-2xl font-semibold text-primary">
+              Bản chất giai cấp của Nhà nước
+            </h3>
+            <p className="leading-6 text-midnight/80">
+              Bản chất giai cấp công nhân của Nhà nước được thể hiện qua các mặt
+              sau:
             </p>
             <figure className="relative w-full overflow-hidden rounded-2xl border border-primary/10 bg-parchment/60">
               <img
@@ -63,50 +114,83 @@ const Ideology = () => {
                 className="w-full object-cover"
               />
               <figcaption className="absolute bottom-3 left-1/2 w-[85%] -translate-x-1/2 rounded-lg bg-white/85 px-3 py-2 text-center text-xs text-midnight/70 shadow">
-                Khối công nhân Việt Nam trong buổi lễ diễu binh kỷ niệm 80 năm Quốc Khánh nước CHXNCN Việt Nam.
+                Khối công nhân Việt Nam trong buổi lễ diễu binh kỷ niệm 80 năm
+                Quốc Khánh nước CHXNCN Việt Nam.
               </figcaption>
             </figure>
           </div>
-          <ul className="grid gap-4 text-sm text-midnight/80">
-            {supportingPoints.map((point) => (
-              <li key={point} className="rounded-2xl border border-primary/10 bg-parchment/60 px-5 py-4">
-                {point}
+
+          <ul className="grid gap-4 text-midnight/80">
+            {supportingPoints.map((point, index) => (
+              <li
+                key={point.title}
+                className="space-y-3 rounded-xl border border-primary/10 bg-parchment/60 px-5 py-4"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white font-semibold">
+                    {index + 1}
+                  </span>
+                  <h3 className="text-lg font-semibold text-primary">
+                    {point.title}
+                  </h3>
+                </div>
+                <p className="leading-6 text-midnight/80">
+                  {point.description}
+                </p>
               </li>
             ))}
           </ul>
         </aside>
 
         <header className="max-w-4xl space-y-4 text-center md:text-left">
-          <p className="text-xs uppercase tracking-[0.35em] text-primary/80">Phần I</p>
-          <h2 className="text-4xl font-semibold md:text-5xl">Quyền lực nhà nước bắt nguồn từ nhân dân</h2>
+          <p className="text-xs uppercase tracking-[0.35em] text-primary/80">
+            Phần I
+          </p>
+          <h2 className="text-4xl font-semibold md:text-5xl">
+            Quyền lực nhà nước bắt nguồn từ nhân dân
+          </h2>
           <p className="text-base leading-relaxed text-midnight/80">
-            Hồ Chí Minh đã kết hợp chủ nghĩa yêu nước truyền thống với lý luận Mác-Lênin. Mô hình quản trị được hình thành
-            là mô hình toàn diện: quyền lực bắt nguồn từ nhân dân, được thực thi bởi những người đại diện cho nhân dân, và phải phục vụ cho
-            phúc lợi của nhân dân.
+            Hồ Chí Minh đã kết hợp chủ nghĩa yêu nước truyền thống với lý luận
+            Mác-Lênin. Mô hình quản trị được hình thành là mô hình toàn diện:
+            quyền lực bắt nguồn từ nhân dân, được thực thi bởi những người đại
+            diện cho nhân dân, và phải phục vụ cho phúc lợi của nhân dân.
           </p>
         </header>
 
-        <div className="grid gap-10 md:grid-cols-3">
-          {ideologySections.map((section) => (
-            <article
-              key={section.title}
-              className="flex flex-col gap-6 rounded-3xl bg-white/90 p-6 shadow-lg ring-1 ring-primary/10"
-            >
-              <div className="flex items-center gap-4">
-                <img src={section.image} alt={`${section.title} icon`} className="h-14 w-14" loading="lazy" />
-                <h3 className="text-2xl font-semibold text-primary">{section.title}</h3>
-              </div>
-              <p className="text-sm leading-relaxed text-midnight/80">{section.description}</p>
-              <figure className="relative w-full overflow-hidden rounded-2xl border border-primary/10 bg-parchment/60">
-                <img
-                  src={section.photo}
-                  alt={`Placeholder for ${section.title.toLowerCase()} historical image`}
-                  className="w-full object-cover"
-                />
-              </figure>
-            </article>
-          ))}
-        </div>
+        <section className="w-full bg-parchment/60 py-12">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-8 md:grid-cols-3">
+              {ideologySections.map((section, index) => (
+                <article
+                  key={section.title}
+                  className="flex flex-col gap-6 rounded-xl bg-white/90 p-6 shadow-lg ring-1 ring-primary/10"
+                >
+                  <figure className="relative w-full overflow-hidden rounded-xl border border-primary/10 bg-parchment/40">
+                    <img
+                      src={section.photo}
+                      alt={`Historical illustration for ${section.title.toLowerCase()}`}
+                      className="w-full h-48 object-cover"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div className="flex items-center gap-4">
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-white text-xl font-bold shadow-md">
+                      {index + 1}
+                    </span>
+                    <h3 className="text-2xl font-semibold text-primary">
+                      {section.title}
+                    </h3>
+                  </div>
+
+                  <p className="text leading-6 text-midnight/80">
+                    {section.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
       </div>
     </section>
   )

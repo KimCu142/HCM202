@@ -5,6 +5,7 @@ import Home from './sections/Home'
 import Ideology from './sections/Ideology'
 import Practice from './sections/Practice'
 import References from './sections/References'
+import Quiz from './sections/Quiz'
 
 const sectionOrder = ['home', 'ideology', 'practice', 'references'] as const
 
@@ -49,11 +50,12 @@ const App = () => {
   return (
     <div className="min-h-screen bg-muted">
       <Header activeSection={activeSection} onNavigate={handleNavigate} />
-      <main className="flex flex-col gap-20">
+      <main className="flex flex-col gap-16">
         <Home />
         <Ideology />
         <Practice />
         <References />
+        <Quiz />
       </main>
       <Footer />
     </div>
