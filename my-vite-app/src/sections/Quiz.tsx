@@ -1,6 +1,13 @@
-import React, { useState } from "react"
+import { useState } from "react"
 
-const quizQuestions = [
+type QuizQuestion = {
+  question: string
+  options: string[]
+  correctAnswer: number
+  image: string
+}
+
+const quizQuestions: QuizQuestion[] = [
   {
     question: "Dân góp ý bạn chưa làm tốt. Bạn sẽ:",
     options: [
@@ -118,12 +125,12 @@ const quizQuestions = [
 const Quiz = () => {
   const [showQuiz, setShowQuiz] = useState(false)
   const [currentQuestion, setCurrentQuestion] = useState(0)
-  const [selectedAnswer, setSelectedAnswer] = useState(null)
-  const [userAnswers, setUserAnswers] = useState([])
+  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
+  const [userAnswers, setUserAnswers] = useState<number[]>([])
   const [showResults, setShowResults] = useState(false)
   const [showIntro, setShowIntro] = useState(true)
 
-  const handleAnswerSelect = (index) => {
+  const handleAnswerSelect = (index: number) => {
     setSelectedAnswer(index)
   }
 
@@ -144,13 +151,13 @@ const Quiz = () => {
   const handlePrevious = () => {
     if (currentQuestion > 0) {
       setCurrentQuestion(currentQuestion - 1)
-      setSelectedAnswer(userAnswers[currentQuestion - 1])
+      setSelectedAnswer(userAnswers[currentQuestion - 1] ?? null)
       setUserAnswers(userAnswers.slice(0, -1))
     }
   }
 
-  const calculateScore = () => {
-    return userAnswers.reduce((score, answer, index) => {
+  const calculateScore = (): number => {
+    return userAnswers.reduce<number>((score, answer, index) => {
       return score + (answer === quizQuestions[index].correctAnswer ? 1 : 0)
     }, 0)
   }
@@ -217,7 +224,6 @@ const Quiz = () => {
   //Quiz results
   if (showQuiz && showResults) {
     const score = calculateScore()
-    const percentage = (score / quizQuestions.length) * 100
 
     // Determine feedback message based on score
     let feedbackMessage = ""
@@ -266,7 +272,7 @@ const Quiz = () => {
                 <p className="text-xl font-semibold text-midnight mb-4">
                   Chi tiết câu trả lời:
                 </p>
-                {quizQuestions.map((q, index: number) => (
+                {quizQuestions.map((q, index) => (
                   <div
                     key={index}
                     className="flex items-start gap-3 p-4 bg-white/95 rounded-xl shadow ring-1 ring-[#d6c2a4]"

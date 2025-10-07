@@ -36,7 +36,7 @@ const ideologySections = [
         </li>
       </ul>
     ),
-    image: iconPeople,
+    image: iconVote,
     photo:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQbeitdL_CNrqFFuLBVLfSl_GAdIEuO9q1Vg&s",
   },
@@ -171,6 +171,10 @@ const Ideology = () => {
                       alt={`Historical illustration for ${section.title.toLowerCase()}`}
                       className="w-full h-48 object-cover"
                       loading="lazy"
+                      onError={(event) => {
+                        event.currentTarget.onerror = null
+                        event.currentTarget.src = portraitPlaceholder
+                      }}
                     />
                   </figure>
 
@@ -178,9 +182,17 @@ const Ideology = () => {
                     <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-white text-xl font-bold shadow-md">
                       {index + 1}
                     </span>
-                    <h3 className="text-2xl font-semibold text-primary">
-                      {section.title}
-                    </h3>
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={section.image}
+                        alt={`Icon representing ${section.title.toLowerCase()}`}
+                        className="h-12 w-12 object-contain"
+                        loading="lazy"
+                      />
+                      <h3 className="text-2xl font-semibold text-primary">
+                        {section.title}
+                      </h3>
+                    </div>
                   </div>
 
                   <p className="text leading-6 text-midnight/80">

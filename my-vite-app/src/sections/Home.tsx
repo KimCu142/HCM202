@@ -1,5 +1,3 @@
-import heroImage from "../assets/placeholder-landscape.svg"
-
 const highlights = [
   {
     title: "Di sản Hiến pháp",

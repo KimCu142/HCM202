@@ -1,6 +1,3 @@
-import { useState } from "react"
-import documentPlaceholder from "../assets/placeholder-document.svg"
-
 const references = [
   {
     id: 1,

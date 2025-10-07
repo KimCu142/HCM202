@@ -1,5 +1,3 @@
-import landscapePlaceholder from "../assets/placeholder-landscape.svg"
-
 const practiceTimeline = [
   {
     id: 1,
