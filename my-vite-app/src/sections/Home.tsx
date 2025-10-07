@@ -20,21 +20,41 @@ const Home = () => {
   return (
     <section id="home" className="px-4 pt-16 sm:px-6 lg:px-8">
       <div className="mx-auto flex max-w-7xl flex-col gap-8">
-        <div className="overflow-hidden rounded-xl bg-paper-texture shadow-md ring-1 ring-[#d6c2a4]">
-          <div className="grid gap-10 bg-gradient-to-br from-white/85 via-parchment/90 to-primary/10 p-8 md:grid-cols-[1.1fr_0.9fr] md:p-14">
-            <div className="space-y-6">
-              <p className="text-xs uppercase tracking-[0.4em] text-primary/80">
+        <div className="relative overflow-hidden rounded-xl bg-paper-texture shadow-md ring-1 ring-[#d6c2a4]">
+          <div className="absolute inset-0 z-0 bg-gradient-to-br from-white/85 via-parchment/90 to-primary/10" />
+          <video
+            className="absolute inset-0 z-10 h-full w-full object-cover opacity-70 pointer-events-none"
+            src="/video/video_background.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+          <figure
+            className="pointer-events-none absolute inset-0 z-20 opacity-20"
+            aria-hidden="true"
+          >
+            <img
+              src="/img/img_bg.png"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </figure>
+          <div className="pointer-events-none absolute inset-0 z-[25] bg-black/35" />
+          <div className="relative z-40 grid gap-10 p-8 md:grid-cols-2 md:p-14">
+            <div className="space-y-6 md:col-start-1">
+              <p className="text-xs uppercase tracking-[0.4em] text-white/80">
                 Tường thuật lịch sử
               </p>
-              <h2 className="text-4xl font-semibold leading-tight text-midnight md:text-5xl">
-                TƯ TƯỞNG HỒ CHÍ MINH VỀ NHÀ NƯỚC CỦA NHÂN DÂN, DO NHÂN DÂN, VÌ
-                NHÂN DÂN
+              <h2 className="text-4xl font-semibold leading-[3rem] text-white md:text-5xl md:leading-[3.75rem]">
+                <span className="whitespace-nowrap">TƯ TƯỞNG HỒ CHÍ MINH</span> VỀ
+                NHÀ NƯỚC CỦA NHÂN DÂN, DO NHÂN DÂN, VÌ NHÂN DÂN
               </h2>
-              <blockquote className="border-l-4 border-primary/40 pl-4 text-lg italic text-midnight/80">
+              <blockquote className="border-l-4 border-white/40 pl-4 text-lg italic text-white/80">
                 “Chế độ của chúng ta là chế độ của dân, do dân và vì dân.” — Hồ
                 Chí Minh, 1945
               </blockquote>
-              <p className="text-base leading-relaxed text-midnight/80">
+              <p className="text-base leading-relaxed text-white/80">
                 Khám phá quá trình phát triển lịch sử của tư tưởng dân chủ tại
                 Việt Nam. Triển lãm này tái hiện những trụ cột tư tưởng đã định
                 hình nên nhà nước Việt Nam hiện đại và làm nổi bật sự vận dụng
@@ -55,14 +75,7 @@ const Home = () => {
                 </a>
               </div>
             </div>
-
-            <figure className="relative flex items-center justify-center">
-              <img
-                src="https://a.tcnn.vn//Images/images/tcnn(2).jpg"
-                alt="Placeholder for archival photograph illustrating democratic gatherings"
-                className="relative z-10 max-w-lg rounded-lg shadow-md w-full h-auto object-contain"
-              />
-            </figure>
+            <div className="hidden md:block" aria-hidden="true" />
           </div>
         </div>
 
